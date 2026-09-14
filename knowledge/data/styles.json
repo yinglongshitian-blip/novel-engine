@@ -1,0 +1,45 @@
+{
+  "name": "writing-styles",
+  "source": "knowledge/05-writing-styles.md",
+  "description": "24 种文风执行对照表，供作者画像 / 文风锁参数生成消费。",
+  "styles": [
+    { "name": "小白文",         "group": "阅读门槛", "sentence": "极短句10-15字", "dialogue_ratio": "50%+",     "dialogue_target": 0.50, "wording": "大白话",       "rhythm": "极快，不打磨",       "temp": [0.90, 0.95] },
+    { "name": "老白文",         "group": "阅读门槛", "sentence": "长短句混合",    "dialogue_ratio": "25%-35%",  "dialogue_target": 0.30, "wording": "精准克制",     "rhythm": "中慢，重逻辑",       "temp": [0.75, 0.80] },
+    { "name": "文青文",         "group": "阅读门槛", "sentence": "长句为主，修辞丰富", "dialogue_ratio": "20%-30%", "dialogue_target": 0.25, "wording": "辞藻讲究", "rhythm": "慢，重氛围",       "temp": [0.80, 0.85] },
+
+    { "name": "标准节奏型",     "group": "节奏类型", "sentence": "长短句混合",    "dialogue_ratio": "30%-40%",  "dialogue_target": 0.35, "wording": "叙事为主",     "rhythm": "中节奏",             "temp": [0.85, 0.85] },
+    { "name": "快节奏型",       "group": "节奏类型", "sentence": "短句15-20字",   "dialogue_ratio": "40%-45%",  "dialogue_target": 0.42, "wording": "简洁有力",     "rhythm": "快，信息密度高",     "temp": [0.85, 0.85] },
+    { "name": "高频打脸型",     "group": "节奏类型", "sentence": "短句+感叹号",   "dialogue_ratio": "45%-50%",  "dialogue_target": 0.47, "wording": "直白外放",     "rhythm": "极快，一章两反转",   "temp": [0.90, 0.90] },
+    { "name": "强冲突型",       "group": "节奏类型", "sentence": "长短句交替",    "dialogue_ratio": "35%-40%",  "dialogue_target": 0.38, "wording": "火药味重",     "rhythm": "快，冲突第一句爆发", "temp": [0.85, 0.85] },
+
+    { "name": "轻松搞笑/沙雕风", "group": "叙事风格", "sentence": "短句15字内",   "dialogue_ratio": "40%+",     "dialogue_target": 0.42, "wording": "口语化玩梗",   "rhythm": "快，每500字一梗",    "temp": [0.90, 0.95] },
+    { "name": "正剧风",         "group": "叙事风格", "sentence": "长短句20-25字", "dialogue_ratio": "≤30%",     "dialogue_target": 0.25, "wording": "书面语克制",   "rhythm": "中慢，重铺垫",       "temp": [0.75, 0.80] },
+    { "name": "黑暗流/黑深残",   "group": "叙事风格", "sentence": "长句为主",     "dialogue_ratio": "≤25%",     "dialogue_target": 0.20, "wording": "阴郁冷峻",     "rhythm": "慢，重心理压迫",     "temp": [0.70, 0.75] },
+    { "name": "热血燃向",       "group": "叙事风格", "sentence": "短句+排比",     "dialogue_ratio": "30%-40%",  "dialogue_target": 0.35, "wording": "铿锵有力",     "rhythm": "快，情绪密集",       "temp": [0.85, 0.85] },
+    { "name": "甜宠风",         "group": "叙事风格", "sentence": "长短句交替",    "dialogue_ratio": "40%-50%",  "dialogue_target": 0.45, "wording": "柔软温暖",     "rhythm": "慢，重细节递进",     "temp": [0.85, 0.85] },
+
+    { "name": "华丽辞藻型",     "group": "语言质感", "sentence": "长句为主",      "dialogue_ratio": "20%-25%",  "dialogue_target": 0.22, "wording": "辞藻华丽",     "rhythm": "慢，重文字美感",     "temp": [0.80, 0.85] },
+    { "name": "平实口语型",     "group": "语言质感", "sentence": "短句接近日常",  "dialogue_ratio": "45%-50%",  "dialogue_target": 0.47, "wording": "大白话",       "rhythm": "快，贴近生活",       "temp": [0.85, 0.85] },
+    { "name": "古风/文白夹杂型", "group": "语言质感", "sentence": "文白交替",     "dialogue_ratio": "25%-30%",  "dialogue_target": 0.28, "wording": "文言白话结合", "rhythm": "中慢，重意境",       "temp": [0.80, 0.80] },
+    { "name": "港漫风",         "group": "语言质感", "sentence": "极短句+拟声词", "dialogue_ratio": "30%-35%",  "dialogue_target": 0.32, "wording": "夸张爆裂",     "rhythm": "快，战斗密集",       "temp": [0.85, 0.85] },
+
+    { "name": "脑洞文/猎奇风",   "group": "特殊风格", "sentence": "灵活",         "dialogue_ratio": "灵活",     "dialogue_target": 0.40, "wording": "新奇词汇",     "rhythm": "中快，设定即看点",   "temp": [0.90, 0.90] },
+    { "name": "吐槽役风格",     "group": "特殊风格", "sentence": "短句+内心独白", "dialogue_ratio": "50%-60%",  "dialogue_target": 0.55, "wording": "第一人称吐槽", "rhythm": "快，吐槽密集",       "temp": [0.90, 0.90] },
+    { "name": "欢乐迪化流",     "group": "特殊风格", "sentence": "长短句+视角切换", "dialogue_ratio": "30%-40%", "dialogue_target": 0.35, "wording": "配角视角衬托", "rhythm": "快，误读推动",       "temp": [0.90, 0.90] },
+
+    { "name": "种田/基建文",     "group": "设定题材", "sentence": "平实叙述",     "dialogue_ratio": "25%-30%",  "dialogue_target": 0.28, "wording": "实用数字细节", "rhythm": "中节奏",             "temp": [0.85, 0.85] },
+    { "name": "马甲文",         "group": "设定题材", "sentence": "长短句悬念递进", "dialogue_ratio": "25%-35%", "dialogue_target": 0.30, "wording": "多身份不同语感", "rhythm": "中快",             "temp": [0.85, 0.85] },
+    { "name": "穿书/系统文",     "group": "设定题材", "sentence": "短句+弹幕吐槽", "dialogue_ratio": "40%-50%",  "dialogue_target": 0.45, "wording": "系统提示穿插", "rhythm": "快，任务驱动",       "temp": [0.90, 0.90] },
+    { "name": "空间文",         "group": "设定题材", "sentence": "写实写意交替",  "dialogue_ratio": "25%-30%",  "dialogue_target": 0.28, "wording": "现实与空间切换", "rhythm": "中节奏",           "temp": [0.85, 0.85] },
+    { "name": "直播/论坛体",     "group": "设定题材", "sentence": "多视角碎片",   "dialogue_ratio": "40%-50%",  "dialogue_target": 0.45, "wording": "弹幕评论帖子", "rhythm": "快，碎片拼全景",     "temp": [0.90, 0.90] }
+  ],
+  "style_lock_defaults": {
+    "avg_sentence_len": 18.0,
+    "dialogue_ratio": 0.30,
+    "avg_sentence_stddev_min": 3.0,
+    "metaphor_per_1k": 2,
+    "ai_word_per_chapter": 3,
+    "sentence_rhythm": "长短交替，禁止连续4句同长",
+    "paragraph_ending": "禁止每段升华"
+  }
+}

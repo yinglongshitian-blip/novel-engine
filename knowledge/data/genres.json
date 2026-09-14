@@ -1,0 +1,382 @@
+{
+  "name": "genres",
+  "source": "knowledge/02-genres.md",
+  "description": "21 类题材的疲劳词与专属审查维度，供 ai_flavor_check.py / review_engine.py 消费。",
+  "general_fatigue_words": [
+    "仿佛",
+    "宛如",
+    "不禁",
+    "猛地"
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "玄幻",
+      "fatigue_words": [
+        "斗气",
+        "灵力",
+        "威压",
+        "强者为尊"
+      ],
+      "review_dims": [
+        {
+          "item": "境界体系是否前后矛盾",
+          "level": "🔴"
+        },
+        {
+          "item": "战力崩坏",
+          "level": "🟠"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "奇幻",
+      "fatigue_words": [
+        "魔法",
+        "魔力",
+        "咒语",
+        "史诗"
+      ],
+      "review_dims": [
+        {
+          "item": "魔法体系规则是否前后矛盾",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "武侠",
+      "fatigue_words": [
+        "江湖",
+        "侠义",
+        "内力",
+        "快意恩仇"
+      ],
+      "review_dims": [
+        {
+          "item": "武功是否超出武侠范畴",
+          "level": "🟠"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "仙侠",
+      "fatigue_words": [
+        "道心",
+        "因果",
+        "顿悟",
+        "飞升"
+      ],
+      "review_dims": [
+        {
+          "item": "境界体系是否前后矛盾",
+          "level": "🔴"
+        },
+        {
+          "item": "天劫因果是否前后矛盾",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "都市",
+      "fatigue_words": [
+        "商业帝国",
+        "大佬",
+        "普通人",
+        "格局"
+      ],
+      "review_dims": [
+        {
+          "item": "是否违反社会/物理常识",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "军事",
+      "fatigue_words": [
+        "铁血",
+        "战友情",
+        "使命",
+        "热血"
+      ],
+      "review_dims": [
+        {
+          "item": "军备战术是否严重失实",
+          "level": "🟠"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "历史",
+      "fatigue_words": [
+        "江山",
+        "社稷",
+        "气运",
+        "千古一帝"
+      ],
+      "review_dims": [
+        {
+          "item": "重大历史人物是否严重歪曲",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "游戏",
+      "fatigue_words": [
+        "副本",
+        "装备",
+        "经验",
+        "boss"
+      ],
+      "review_dims": [
+        {
+          "item": "比赛机制是否违背规则",
+          "level": "🔴"
+        },
+        {
+          "item": "游戏机制是否前后矛盾",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "体育",
+      "fatigue_words": [
+        "天赋",
+        "努力",
+        "冠军梦",
+        "巅峰"
+      ],
+      "review_dims": [
+        {
+          "item": "比赛机制是否违背规则",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "科幻",
+      "fatigue_words": [
+        "维度",
+        "意识",
+        "量子",
+        "星海"
+      ],
+      "review_dims": [
+        {
+          "item": "核心科技是否前后矛盾",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "诸天无限",
+      "fatigue_words": [
+        "任务",
+        "主神",
+        "穿梭",
+        "兑换"
+      ],
+      "review_dims": [
+        {
+          "item": "各世界力量体系是否混乱",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "悬疑",
+      "fatigue_words": [
+        "诡异",
+        "真相",
+        "谜团",
+        "背后"
+      ],
+      "review_dims": [
+        {
+          "item": "线索是否凭空出现",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "轻小说/二次元",
+      "fatigue_words": [
+        "中二",
+        "宅",
+        "萌",
+        "羁绊"
+      ],
+      "review_dims": [
+        {
+          "item": "卖萌是否过度冲淡主线",
+          "level": "🟡"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "古代言情",
+      "fatigue_words": [
+        "心尖",
+        "宠溺",
+        "眼底",
+        "薄唇"
+      ],
+      "review_dims": [
+        {
+          "item": "古代人物行为是否完全现代化",
+          "level": "🔴"
+        },
+        {
+          "item": "感情推进是否有铺垫",
+          "level": "🟡"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "现代言情",
+      "fatigue_words": [
+        "心动",
+        "偏爱",
+        "撩人",
+        "圆满"
+      ],
+      "review_dims": [
+        {
+          "item": "感情推进是否有铺垫",
+          "level": "🟡"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "玄幻言情",
+      "fatigue_words": [
+        "神君",
+        "宿命",
+        "情劫",
+        "生生世世"
+      ],
+      "review_dims": [
+        {
+          "item": "力量体系与感情线是否各自为政",
+          "level": "🟠"
+        },
+        {
+          "item": "感情推进是否有铺垫",
+          "level": "🟡"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "浪漫青春",
+      "fatigue_words": [
+        "少年",
+        "夏天",
+        "白月光",
+        "毕业季"
+      ],
+      "review_dims": [
+        {
+          "item": "青春感是否失真",
+          "level": "🟡"
+        },
+        {
+          "item": "感情推进是否有铺垫",
+          "level": "🟡"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "悬疑推理",
+      "fatigue_words": [
+        "推理",
+        "证据",
+        "诡计",
+        "凶手"
+      ],
+      "review_dims": [
+        {
+          "item": "线索是否凭空出现",
+          "level": "🔴"
+        },
+        {
+          "item": "关键证据是否隐藏到结尾才公布",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "科幻空间",
+      "fatigue_words": [
+        "星舰",
+        "跃迁",
+        "殖民",
+        "银河"
+      ],
+      "review_dims": [
+        {
+          "item": "空间物理设定是否违背自洽性",
+          "level": "🔴"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "游戏竞技",
+      "fatigue_words": [
+        "电竞",
+        "操作",
+        "战术",
+        "夺冠"
+      ],
+      "review_dims": [
+        {
+          "item": "比赛机制是否违背规则",
+          "level": "🔴"
+        },
+        {
+          "item": "对手是否智商掉线",
+          "level": "🟠"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "同人",
+      "fatigue_words": [
+        "原著",
+        "原作",
+        "人设",
+        "还原"
+      ],
+      "review_dims": [
+        {
+          "item": "角色言行是否符合原作人设",
+          "level": "🔴"
+        }
+      ],
+      "copyright_notice": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ai-words",
+  "source": "knowledge/08-ai-words.md",
+  "description": "去AI化 8 类高频词表 + 量化阈值，供 ai_flavor_check.py / review_engine.py 消费。",
+  "classes": {
+    "emphasis": { "label": "强调词", "words": ["无疑", "毫无疑问", "显然", "显而易见"], "advice": "删除或改为具体描写" },
+    "contrast": { "label": "转折词", "words": ["然而", "但是", "不过"], "keep": ["却"], "advice": "保留「却」，其余口语化" },
+    "summary": { "label": "总结词", "words": ["总之", "综上所述", "总而言之"], "advice": "删除，让情节自己说话" },
+    "exclamation": { "label": "感叹词", "words": ["不禁", "不由得", "忍不住"], "advice": "每章最多1处，优先删" },
+    "degree": { "label": "程度词", "words": ["非常", "十分", "极其", "相当"], "advice": "用具体动作细节替代" },
+    "psychology": { "label": "心理词", "words": ["心里想", "暗自盘算", "心中暗道"], "advice": "直接写想法或动作" },
+    "written_connector": { "label": "书面连接", "words": ["与此同时", "此外", "值得一提的是"], "advice": "换成「就在这时」「还有」或断句" },
+    "redundancy": { "label": "冗余词", "words": ["缓缓", "轻轻", "慢慢"], "advice": "保留关键处，其余删" }
+  },
+  "metaphor_words": ["仿佛", "宛如", "如同", "好似", "犹如", "恍若"],
+  "ai_high_freq": ["深深", "缓缓", "淡淡", "不禁", "竟然", "瞬间", "微微", "轻轻",
+                   "默默", "静静", "悄悄", "徐徐", "渐渐"],
+  "thresholds": {
+    "metaphor_per_1k": 2,
+    "ai_word_per_chapter": 3,
+    "fatigue_word_per_3k": 1
+  }
+}
