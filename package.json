@@ -1,0 +1,14 @@
+{
+  "name": "novel-engine",
+  "version": "5.3.0",
+  "description": "小说创作引擎 v5.3 — 多Agent网文创作流水线（推演→大纲→卷纲→章纲→正文→审查→交付）+ 篇幅分类 + 书籍简介",
+  "private": true,
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "e2e": "node tests/e2e.js",
+    "verify": "node tests/run-tests.js && node tests/e2e.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

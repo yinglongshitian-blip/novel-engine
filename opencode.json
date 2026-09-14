@@ -1,0 +1,110 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "novel-architect",
+  "agent": {
+    "novel-architect": {
+      "description": "小说创作主调度Agent。任务规划、子Agent调度、状态管理、关键节点暂停。",
+      "mode": "primary",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/novel-architect.md}",
+      "permission": {
+        "write": { "*": "deny", ".novel/**": "allow" },
+        "edit": { "*": "deny", ".novel/**": "allow" },
+        "bash": { "*": "deny", "python scripts/*": "allow" },
+        "task": {
+          "*": "deny",
+          "deduction-agent": "allow",
+          "outline-agent": "allow",
+          "chapter-writer": "allow",
+          "review-agent": "allow",
+          "script-runner": "allow",
+          "character-tracker": "allow"
+        },
+        "skill": { "*": "deny", "novel-*": "allow" }
+      }
+    },
+    "deduction-agent": {
+      "description": "推演Agent。基于已有资料推演行动线与碰撞点，逐条确认，禁止引入新设定。",
+      "mode": "subagent",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/deduction-agent.md}",
+      "permission": {
+        "write": "deny",
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny"
+      }
+    },
+    "outline-agent": {
+      "description": "大纲规划Agent。将推演结果转化为主线节点、卷纲、章纲（碰撞网结构）。",
+      "mode": "subagent",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/outline-agent.md}",
+      "permission": {
+        "write": { "*": "deny", ".novel/**": "allow" },
+        "edit": { "*": "deny", ".novel/**": "allow" },
+        "bash": "deny",
+        "task": "deny"
+      }
+    },
+    "chapter-writer": {
+      "description": "正文生成Agent。基于章纲生成正文，内置18维审查自动修正。",
+      "mode": "subagent",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/chapter-writer.md}",
+      "permission": {
+        "write": { "*": "deny", ".novel/**": "allow" },
+        "edit": { "*": "deny", ".novel/**": "allow" },
+        "bash": { "*": "deny", "python scripts/*": "allow" },
+        "task": "deny",
+        "skill": { "*": "deny", "novel-*": "allow" }
+      }
+    },
+    "review-agent": {
+      "description": "独立审查Agent。18维审查 + AI味六层面检测，输出结构化审查报告。",
+      "mode": "subagent",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/review-agent.md}",
+      "permission": {
+        "write": "deny",
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny"
+      }
+    },
+    "script-runner": {
+      "description": "脚本调用Agent。自动调用Python脚本，返回结构化JSON结果。",
+      "mode": "subagent",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/script-runner.md}",
+      "permission": {
+        "write": "deny",
+        "edit": "deny",
+        "bash": { "*": "deny", "python scripts/*": "allow" },
+        "task": "deny"
+      }
+    },
+    "character-tracker": {
+      "description": "角色追踪Agent。追踪角色出场与行动线推进，更新 action-lines.json。",
+      "mode": "subagent",
+      "model": "deepseek/deepseek-v4-flash",
+      "prompt": "{file:./.opencode/agents/character-tracker.md}",
+      "permission": {
+        "write": { "*": "deny", ".novel/**": "allow" },
+        "edit": { "*": "deny", ".novel/**": "allow" },
+        "bash": { "*": "deny", "python scripts/*": "allow" },
+        "task": "deny"
+      }
+    }
+  },
+  "permission": {
+    "skill": { "*": "deny", "novel-*": "allow" },
+    "write": { "*": "deny", ".novel/**": "allow" },
+    "edit": { "*": "deny", ".novel/**": "allow" }
+  },
+  "skills": {
+    "paths": [
+      "./.opencode/skills"
+    ]
+  }
+}
