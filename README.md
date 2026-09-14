@@ -23,7 +23,7 @@ npm run verify
 依赖：Node.js ≥ 18、Python ≥ 3.8（仅标准库，无第三方依赖）。
 
 在 OpenCode 中使用：项目根 `opencode.json` 已将 `novel-architect` 设为默认 Agent，
-并注册 7 个子 Agent。直接对 OpenCode 说「写一部玄幻小说」即可进入流水线。
+并注册 7 个子 Agent。直接对 OpenCode 说「写一部小说」即可进入流水线。
 
 **多项目：一本书 = 一个项目目录（推荐做法）。** 在同一目录开两本书会串状态。
 如需同目录多书，主 Agent 的 `<project-detection>` 会创建 `.novel/books/{书名}/` 并维护 `.novel/active-book.json`。
